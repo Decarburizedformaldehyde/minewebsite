@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>欢迎来到我的主页</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://static0.xesimg.com/talcode/bootstrap4.6/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script src="../static/js/music.js"></script>
+  </head>
+<body>
+    <!--============  导航栏  ===============-->
+    <div class="banner">
+        <a href="/me"  class="banner-link">个人中心</a>
+        <a href="/recommend" class="banner-link">宝藏推荐</a>
+        <a href="/dress" class="banner-link">形象设置</a>
+        <a href="/music" class="banner-link">音乐设置</a>
+        <a href="/movie" class="banner-link">热门视频</a>
+        <a href="/gx" class="banner-link">更新日志</a>
+        <a href="/workroom" class="banner-link">工作室</a>
+        <a href="/search_form" class="banner-link">万能搜索框</a>
+        <a href="/mc" class="banner-link">Minecraft专区</a>
+    </div>
+    
+    <!--===========  轮播图  ==============-->
+    <div class="lun">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval=2000 >
+            <div class="carousel-inner">
+                <div class="carousel-item ">
+                    <a href="/movie">
+                    <img src="/static/images/pic1.png" class="d-block w-100" >
+                    </a>
+                </div>
+                <div class="carousel-item active">
+                    <a href="/workroom">
+                    <img src="/static/images/pic2.png" class="d-block w-100" >
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/pic3.png" class="d-block w-100" >
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--===========  音乐控制按钮  ==============-->
+    <div class="bgmusic">
+        <!--TODO:可以修改43行,改变你的音乐按钮图片-->
+        <img src="/static/images/音乐播放11.png" class="music-stop" width="60px">
+        <audio src="{{music}}" autoplay="autoplay"></audio>
+    </div>
+    
+    <!--===========  首页形象  ==============-->
+    <div class="div_img">
+        <img src="{{x}}">
+        <br>
+        <br>
+    </div>
+    
+    <div>
+         <p>作者家的猫说：{{y}}</p>
+    </div>
+    <a href="/"><button>换一个</button></a>
+</body>
+</html>

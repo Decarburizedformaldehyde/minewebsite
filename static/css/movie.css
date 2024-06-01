@@ -1,0 +1,11 @@
+body{
+    width: 800px;
+    height: 600px;
+    background: #fffbee;
+    margin:20px auto;
+    color: yellow;
+}
+
+h1{
+    color: green;
+}

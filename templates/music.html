@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时音乐</title>
+    <link rel="stylesheet" href="https://static0.xesimg.com/talcode/bootstrap4.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/music.css">
+</head>
+    <body>
+        <div class="musicbg">
+            <img src="/static/images/pic5.gif">
+        </div>
+        
+        <table class="table content">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col">标题</th>
+                    <th scope="col">播放器</th>
+                    <th scope="col">设置</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in music_list %}
+                    <tr>
+                        <td><p>{{i[0]}}</p></td>
+                        <td><audio src="{{i[1]}}" controls="controls"></audio></td>
+                        <td><a href="/set_music?music={{i[1]}}" class="btn btn-info">设置</a></td>
+                    </tr>
+                {% endfor %}
+                
+                    <tr>
+                        <td><p>开启新征程</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=1343461538.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://music.163.com/song/media/outer/url?id=1343461538.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>黑暗森林</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=416892104.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://music.163.com/song/media/outer/url?id=416892104.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>流浪地球主题音乐</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=1343455977.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://music.163.com/song/media/outer/url?id=1343455977.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>Minecraft</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=4010201.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://music.163.com/song/media/outer/url?id=4010201.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>MINECRAFT PARODY OF SOMETHING JUST LIKE THIS</p></td>
+                        <td><audio src="http://ws.stream.qqmusic.qq.com/C4000021dYDA3rPJy2.m4a?guid=282798544&vkey=CC0835BCA10E3155A40F5DB6ADB2098EC15779C2D197D12C3BFEEA83825C8C9AB5CC440C06ED0CC852429BD8CD3985C0E5D1227534E7A8D8&uin=&fromtag=120032.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://ws.stream.qqmusic.qq.com/C4000021dYDA3rPJy2.m4a?guid=282798544&vkey=CC0835BCA10E3155A40F5DB6ADB2098EC15779C2D197D12C3BFEEA83825C8C9AB5CC440C06ED0CC852429BD8CD3985C0E5D1227534E7A8D8&uin=&fromtag=120032.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>少年中国说</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=1885551650.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://music.163.com/song/media/outer/url?id=1885551650.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>骄傲的少年</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=408332757.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://music.163.com/song/media/outer/url?id=408332757.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>踏山河</p></td>
+                        <td><audio src="http://ws.stream.qqmusic.qq.com/C400002ryupX4akhYx.m4a?guid=970827128&vkey=9F7C69E962451BCDB20B43B92781D4E8659B731DEC7F100869CA88B4B86572E72D8352D8E767D734584311C56AB78F0CAF0AFC52D531DF44&uin=&fromtag=120032.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?music=http://ws.stream.qqmusic.qq.com/C400002ryupX4akhYx.m4a?guid=970827128&vkey=9F7C69E962451BCDB20B43B92781D4E8659B731DEC7F100869CA88B4B86572E72D8352D8E767D734584311C56AB78F0CAF0AFC52D531DF44&uin=&fromtag=120032.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>起风了</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=1475596788.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?http://music.163.com/song/media/outer/url?id=1475596788.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>平凡之路</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=500665346.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?http://music.163.com/song/media/outer/url?id=500665346.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>生僻字</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=518781004.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?http://music.163.com/song/media/outer/url?id=518781004.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                    <tr>
+                        <td><p>人是_</p></td>
+                        <td><audio src="http://music.163.com/song/media/outer/url?id=2014291207.mp3" controls="controls"></audio></td>
+                        <td><a href="/set_music?http://music.163.com/song/media/outer/url?id=2014291207.mp3" class="btn btn-info">设置</a></td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        
+        <a href="http://www.xmsj.org/">
+            <div style="padding: 25px; margin: 50x; border: 5px solid blue; width: 50%; height: 100px;">
+                更多音乐请移步xmsj.org!
+            </div>
+        </a>
+        <a href="/"><button>返回</button></a>
+    </body>
+</html>
+                        

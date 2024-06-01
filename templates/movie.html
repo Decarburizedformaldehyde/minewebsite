@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>热门视频</title>
+    <link rel="stylesheet" href="static/css/movie.css">
+    <style>
+    p.solid {border-style: solid;}
+    p.double {border-style: double;}
+    </style>
+</head>
+
+
+<body>
+    <h1>热门视频链接</h1>
+    <p class="double">
+    <!--TODO2:使用for模板语法遍历movie_list，每项数据为i-->
+    {% for i in movie_list %}
+        <p class="solid">
+        <img src={{i[2]}}>
+        <h4>编号:{{i[0]}}</h4>
+        <a href={{i[4]}}>
+        <h5>标题：{{i[1]}}</h5>
+        </a>
+        <h5>up主：{{i[3]}}</h5>
+        <h5>简介：{{i[5]}}</h5>
+        <h5>热门评论：{{i[6]}}</h5>
+    <br>
+    {% endfor %}
+    <a href="/"><button>返回</button></a>
+</body>
+</html>
